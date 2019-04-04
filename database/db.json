@@ -1,0 +1,93 @@
+{
+  "profile": [
+    {
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a",
+      "phone": "a",
+      "address": "a",
+      "medical_history": "a",
+      "password": "",
+      "c_password": "",
+      "id": 1,
+      "fullName": "a a",
+      "medical": "a"
+    },
+    {
+      "firstName": "parushi",
+      "lastName": "g",
+      "email": "bftghbtrfghbfgcbhnm",
+      "phone": "brtgfdxc",
+      "address": "brtdfs",
+      "medical_history": "bbtrfgvbwsa",
+      "password": "",
+      "c_password": "",
+      "id": 2,
+      "fullName": "parushi",
+      "medical": "bbuytgrewujyhtgre"
+    },
+    {
+      "firstName": "owedsoo",
+      "lastName": "os",
+      "email": "o",
+      "phone": "o",
+      "address": "o",
+      "medical_history": "o",
+      "password": "",
+      "c_password": "",
+      "id": 3,
+      "fullName": "owedsoo os"
+    }
+  ],
+  "upcoming": [
+    {
+      "date": "27 sep 2017 , 09.00am",
+      "name": "Sam Atkins, Earl Moore",
+      "address": "5179 Josefina Square Apt 646",
+      "status": "started"
+    },
+    {
+      "date": "27 sep 2017 , 09.00am",
+      "name": "Sam Atkins, Earl Moore",
+      "address": "5179 Josefina Square Apt 646",
+      "status": "pending"
+    },
+    {
+      "date": "27 sep 2017 , 09.00am",
+      "name": "Sam Atkins, Earl Moore",
+      "address": "5179 Josefina Square Apt 646",
+      "status": "on the way"
+    }
+  ],
+  "past": [
+    {
+      "date": "27 sep 2017 , 09.00am",
+      "name": "Sam Atkins, Earl Moore",
+      "address": "5179 Josefina Square Apt 646",
+      "status": "Completed"
+    },
+    {
+      "date": "27 sep 2017 , 09.00am",
+      "name": "Sam Atkins, Earl Moore",
+      "address": "5179 Josefina Square Apt 646",
+      "status": "Completed"
+    }
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "question": "Calendar Shortcuts Update",
+      "answer": "Starting May 2018, the app will no longer support the Calendar Shortcuts feature. Your calendar account will be unlinked, and all calendar-related information will be deleted from the app and servers.Calendar Shortcuts allowed users to link their personal or work calendars with your app. Once a calendar was connected, upcoming events from the calendar would appear as a 'shortcut' when a user opened the app."
+    },
+    {
+      "id": 2,
+      "question": "Wait time fees",
+      "answer": "In some locations, a per-minute wait time fee will begin a few minutes after your driver arrives at your location. We'll notify you that the charge has started, and it will continue until your driver begins the trip.If your trip is cancelled and you are charged a cancellation fee, you will not be charged for wait time. "
+    },
+    {
+      "id": 3,
+      "question": "How to identify a driver and vehicle?",
+      "answer": "When you request a ride, your app sends your request to nearby drivers. After you're matched with a driver, your app shares info about the vehicle and driver headed to your pickup location. Tap the bar that includes the driver’s name, photo, and vehicle. This displays a photo of your driver along with the vehicle's make, model, and license plate number.When you see your driver's vehicle at your pickup location, confirm that the license plate number displayed in your app matches the actual vehicle. Drivers will often ask your name before starting the trip. "
+    }
+  ]
+}

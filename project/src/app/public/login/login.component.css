@@ -1,0 +1,52 @@
+.heading{
+    color: #33ef67;
+  }
+  hr{
+    font-family: 'Roboto';
+    border:1px solid #f1f1f1;
+    width:100%;
+  }
+
+  
+
+  button {
+    font-family: 'Roboto';
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #33ef67;
+    color: white;
+    text-align: center;
+    width:50%;
+  }
+  
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+
+  .error{
+    color: red;
+  }
+
+  #box{
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    justify-self: center;
+    justify-items: center;
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    width:30%;
+    /* position: relative;
+    text-align: center;
+    vertical-align: middle; */
+}

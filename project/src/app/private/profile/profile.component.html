@@ -1,0 +1,54 @@
+<div class="container" id="box">
+    <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png" alt="Avatar">
+    <br><br>
+  <form [formGroup]="userProfileForm" (ngSubmit)='onSubmit(userProfileForm.value)'> 
+    <div class='flex-container'>
+    <div class='column1'>
+    <label>
+      FULL NAME<br> 
+      <input type="text" for="fullName" formControlName="fullName" [(ngModel)]="data.fullName"><br>
+      <span class="error" *ngIf="userProfileForm.get('fullName').invalid && userProfileForm.get('fullName').touched">Field Required</span>
+    </label>
+    <br><br>
+
+    <label>
+      PHONE NUMBER<br>
+      <input type="text" for="phone" formControlName="phone"  [(ngModel)]="data.phone"><br>
+      <span class="error" *ngIf="userProfileForm.get('phone').invalid && userProfileForm.get('phone').touched">Field Required</span>
+      </label>
+    <br><br>
+    <label>
+      BRIEF MEDICAL HISTORY OF PATIENT(OPTIONAL)<br>
+      <input type="text" for="medical_history" formControlName="medical_history"  [(ngModel)]="data.medical_history" ><br>
+    </label>
+    <br><br><br>
+   
+  </div>
+  
+  <div class='column2'>
+    <label>
+      EMAIL ADDRESS <br>
+      <input type="text" for="email" formControlName="email"  [(ngModel)]="data.email"><br>
+      <span class="error" *ngIf="userProfileForm.get('email').invalid && userProfileForm.get('email').touched">Field Required</span>
+    </label>
+    <br><br>
+    <label>
+     ADDRESS <br>
+      <input type="text" for="address" formControlName="address"  [(ngModel)]="data.address" ><br>
+      <span class="error" *ngIf="userProfileForm.get('address').invalid && userProfileForm.get('address').touched">Field Required</span>
+    </label>
+    <br><br>
+ 
+  
+  <br>
+
+ 
+    <button class ='submit' type="submit" [disabled]="!userProfileForm.valid">Submit</button>
+
+  
+</div>
+</div>
+  </form>
+  </div>
+  
+  

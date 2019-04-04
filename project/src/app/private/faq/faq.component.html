@@ -1,0 +1,19 @@
+
+<div class="container" id="box">
+  <div id="accordion" class="accordion" >
+      <div class="card mb-0" *ngFor="let x of faq">
+          <a class="card-header collapsed" data-toggle="collapse" href="#collapseOne{{x.id}}">
+              <div class="card-title">
+                  {{x.question}}
+              </div>
+            </a>
+          <div id="collapseOne{{x.id}}" class="card-body collapse" data-parent="#accordion" >
+              <p>
+                  {{x.answer}}
+              </p>
+          </div><br>
+
+
+      </div>
+  </div>
+</div>

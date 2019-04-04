@@ -1,0 +1,61 @@
+.div1 {
+    width: 70%;
+    height: 90%;  
+    padding: 20px;
+    border: 1px solid red;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  .booking{
+    background-color: #dae9f7;
+    margin-bottom: 19px;
+    margin-top: 14px;
+  }
+  .container{
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    margin-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    /* border: 1px solid;
+    margin-top: 40px; */
+  }
+
+.status{
+float: right;
+padding-right: 3%;
+  }
+

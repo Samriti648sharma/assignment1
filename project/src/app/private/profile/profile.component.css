@@ -1,0 +1,91 @@
+/* ProfileEditorComponent's private CSS styles */
+.heading{
+    color: #33ef67;
+  }
+  hr{
+    font-family: 'Roboto';
+    border:1px solid #f1f1f1;
+    width:100%;
+  }
+  
+  :host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+  
+  label {
+     /* display: block;  */
+    /* width: 10em; */
+    
+    margin: .5em 0;
+    color: #bfb6b6;
+    /* font-weight: bold; */
+  }
+  
+  input {
+    height: 2em;
+    font-size: 1em;
+    
+    padding-left: .4em;
+   
+  }
+  
+  button {
+    font-family: 'Roboto';
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #266d39;
+    color: white;
+    text-align: center;
+    width:45%;
+  }
+  
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+  .flex-container{
+      display: flex;
+  }
+  .flex-container>div{
+      width: 50%;
+  }
+  .submit{
+      text-align: center;
+      
+  }
+  
+  .error{
+    color: red;
+  }
+  
+  .change{
+    text-align: center;
+  }
+
+  #box{
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    margin-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+img {
+  border-radius: 50%;
+  height:10%;
+  width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
