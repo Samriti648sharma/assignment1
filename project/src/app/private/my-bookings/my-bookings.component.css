@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    /* background-color: #333; */
   }
   
   li {
@@ -24,23 +24,29 @@
   
   li a {
     display: block;
-    color: white;
+    color: #8e8888;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
-  li a:hover:not(.active) {
-    background-color: #111;
+  li.active a {
+    text-decoration: underline;
   }
   
-  .active {
-    background-color: #4CAF50;
-  }
+   /* .active {
+  color: #4CAF50;
+  text-decoration: underline;
+  }  */
+
+
   .booking{
-    background-color: #dae9f7;
+    background-color: #e7eef5;
     margin-bottom: 19px;
     margin-top: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
   }
   .container{
 
@@ -58,4 +64,8 @@
 float: right;
 padding-right: 3%;
   }
+
+#display{
+  padding: 20px;
+}
 

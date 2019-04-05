@@ -29,7 +29,7 @@ constructor(private fb: FormBuilder, private service: RegisterService,private Ro
     "firstName": ['', Validators.required],
     "lastName":  ['', Validators.required],
     "email": ['', Validators.required],
-    "phone": ['', Validators.required],
+    "phone": ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(10)])],
     "address": ['', Validators.required],
     "medical_history": [],
     "password": ['', Validators.required],
@@ -50,7 +50,9 @@ constructor(private fb: FormBuilder, private service: RegisterService,private Ro
   onSubmit = function(data) {
     this.service.register(data).subscribe(
       (response) =>{ console.log(response);
-        this.Route.navigate(['/login']);},
+        this.Route.navigate(['/nav/profile']);
+      localStorage.setItem("user","true")}
+        ,
       (error) => console.log(error)
     );
     

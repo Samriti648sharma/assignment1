@@ -5,56 +5,62 @@
       <div class='flex-container'>
       <div class='column1'>
       <label>
-        FIRST NAME<br>
+          <b> FIRST NAME</b><br>
         <input type="text" for="fname" formControlName="firstName" ><br>
         <span class="error" *ngIf="profileForm.get('firstName').invalid && profileForm.get('firstName').touched">Field Required</span>
       </label>
       <br><br>
       <label>
-        LAST NAME<br>
-        <input type="text" for="lastName" formControlName="lastName" ><br>
-         <span class="error" *ngIf="profileForm.get('lastName').invalid && profileForm.get('lastName').touched">Field Required</span>
-      </label> 
-      <br><br>
+         <b> EMAIL ADDRESS </b><br>
+          <input type="text" for="email" formControlName="email" ><br>
+          <span class="error" *ngIf="profileForm.get('email').invalid && profileForm.get('email').touched">Field Required</span>
+        </label>
+        <br><br>
+        <label>
+            <b>ADDRESS</b><br>
+            <input type="text" for="address" formControlName="address" ><br>
+            <span class="error" *ngIf="profileForm.get('address').invalid && profileForm.get('address').touched">Field Required</span>
+          </label>
+          <br><br>
+     
       <label>
-        EMAIL ADDRESS<br>
-        <input type="text" for="email" formControlName="email" ><br>
-        <span class="error" *ngIf="profileForm.get('email').invalid && profileForm.get('email').touched">Field Required</span>
-      </label>
-      <br><br><br>
-      <label>
-        PHONE NUMBER<br>
-        <input type="text" for="phone" formControlName="phone" ><br>
-        <span class="error" *ngIf="profileForm.get('phone').invalid && profileForm.get('phone').touched">Field Required</span>
-      </label>
+          <b>PASSWORD </b><br>
+          <input type="password" for="password" formControlName="password" ><br>
+          <span class="error" *ngIf="profileForm.get('password').invalid && profileForm.get('password').touched">Field Required</span>
+        </label>
+
     </div>
     
     <div class='column2'>
+        <label>
+           <b> LAST NAME </b><br>
+            <input type="text" for="lastName" formControlName="lastName" ><br>
+             <span class="error" *ngIf="profileForm.get('lastName').invalid && profileForm.get('lastName').touched">Field Required</span>
+          </label> 
+          <br><br>
+          <label>
+              <b>PHONE NUMBER </b><br>
+              <input type="text" for="phone" formControlName="phone" ><br>
+              <span class="error" *ngIf="profileForm.get('phone').invalid && profileForm.get('phone').touched">Field Required</span>
+            </label>
+            <br><br>
+     
       <label>
-        ADDRESS<br>
-        <input type="text" for="address" formControlName="address" ><br>
-        <span class="error" *ngIf="profileForm.get('address').invalid && profileForm.get('address').touched">Field Required</span>
-      </label>
-      <br><br>
-      <label>
-        BRIEF MEDICAL HISTORY OF PATIENT(OPTIONAL):<br>
+        <b>BRIEF MEDICAL HISTORY OF PATIENT(OPTIONAL): </b>
         <input type="text" formControlName="medical_history"><br>
       </label>
       <br><br>
+    
+
       <label>
-        PASSWORD<br>
-        <input type="password" for="password" formControlName="password" ><br>
-        <span class="error" *ngIf="profileForm.get('password').invalid && profileForm.get('password').touched">Field Required</span>
-      </label>
-      <br><br>
-      <label>
-        CONFIRM PASSWORD<br>
+        <b>CONFIRM PASSWORD </b><br>
         <input type="password" for="cpass" formControlName="c_password" ><br>
         <span class="error" *ngIf="profileForm.get('c_password').invalid && profileForm.get('c_password').touched">Field Required</span>
+        
       </label>
     </div>
     <br>
-    </div>
+    </div><br>
     <div class ='submit'>
       <button type="submit" [disabled]="!profileForm.valid"  >Submit</button>
     </div>

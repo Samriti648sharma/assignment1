@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class UpdateService {
 
   constructor(private http: HttpClient) { }
-
-
+  
+//update details service
   update(id,data: any[]) {
     return this.http.patch('http://localhost:3000/profile/'+id, data)
     

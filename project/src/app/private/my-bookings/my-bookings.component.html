@@ -1,25 +1,27 @@
 <div class="container">
     <div class="nav">
     <ul>
-        <li><a class="active" (click)="show()">upcoming</a></li>
-        <li><a  (click)="showpast()">Past</a></li>
+        <li><b><a class="active" (click)="show()">Upcoming</a></b></li>
+        <li><b><a class="active"  (click)="showpast()">Past</a></b></li>
     </ul>
 </div>
 
     <div *ngIf="upcomingFlag">
         <div class="booking" *ngFor = "let booking of upcoming">
-            <span>{{booking.date}}</span>
+            <span id="display">{{booking.date}}</span>
             <b class="status" [ngStyle]="{'color':booking.status=== 'pending' ? '#de6262': '#6565f5' }">{{booking.status | uppercase }}</b>
-            <h3>{{booking.name}}</h3>
-        <span>{{booking.address}}</span>
-        </div>
+            <b><h4 id="display">{{booking.name}}</h4></b>
+        <span id="display">{{booking.address}}</span>
+        <!-- <span class="badge badge-secondary">New</span> -->
+        
+        </div> 
     </div> 
     <div *ngIf="pastFlag">
             <div class="booking" *ngFor = "let booking of past">
-                <span>{{booking.date}}</span>
+                <span id="display">{{booking.date}}</span>
                 <b class="status" [ngStyle]="{'color':booking.status=== 'Completed' ? '#66a266': 'blue' }">{{booking.status | uppercase }}</b>
-                <h3>{{booking.name}}</h3>
-            <span>{{booking.address}}</span>
+                <h3 id="display">{{booking.name}}</h3>
+            <span id="display">{{booking.address}}</span>
             </div>
         </div>   
 
