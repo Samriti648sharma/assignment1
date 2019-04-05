@@ -1,3 +1,4 @@
+<!-- login page  -->
 <div class="container" id="box">
 <h2 class="heading"> LOGIN</h2>
 <hr/>
@@ -6,8 +7,8 @@
         
         <label>
             EMAIL<br>
-          <input type="text" for="email" formControlName="email" ><br>
-          <span class="error" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">Field Required</span>
+          <input type="email" for="email" formControlName="email" ><br>
+          <span class="error" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">Invalid Email</span>
         </label>
         <br><br>
         <label>
@@ -15,12 +16,11 @@
           <input type="text" for="password" formControlName="password" ><br>
            <span class="error" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">Field Required</span>
         </label> 
-
 <br><br>
         <div class ='submit'>
-                <button type="submit" [disabled]="!loginForm.valid"  >Submit</button>
+                <button type="submit" [disabled]="!loginForm.valid"  >Submit</button><br>
               </div>
-              <div class="change">New user ? <a routerLink="/register">Register</a></div>
+             <br> <div class="change">New user ? <a routerLink="/register">Register</a></div>
               
 </form>
 </div>

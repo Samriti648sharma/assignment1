@@ -14,14 +14,10 @@
     padding-top: 24px;
   }
   
-  label {
-     /* display: block;  */
-    /* width: 10em; */
-    
+  label {  
     margin: .5em 0;
     color: #bfb6b6;
-    /* font-weight: bold; */
-  }
+    }
   
   input {
     height: 2em;
@@ -71,16 +67,21 @@
   .change{
     text-align: center;
   }
-
+/* box outside main componenet */
   #box{
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+   width:70%;
     margin-top: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
     padding-right: 10%;
     padding-left: 10%;
+    -webkit-box-shadow: 4px 14px 69px 0px rgba(173,152,173,1);
+    -moz-box-shadow: 4px 14px 69px 0px rgba(173,152,173,1);
+    box-shadow: 4px 14px 69px 0px rgba(173,152,173,1);
+
 }
 
+/*display rounded image */
 img {
   border-radius: 50%;
   height:10%;

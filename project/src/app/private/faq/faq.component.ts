@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 })
 export class FaqComponent implements OnInit {
 
-  faq:any;
+  faq:any; //store response data
 
   constructor(private service: FaqService,private Route:Router) { }
 
   ngOnInit() {
     this.service.fetch_faq().subscribe(
       (response) => {this.faq=response
-      console.log(this.faq);
+      
     },
       (error) => console.log(error)
     );

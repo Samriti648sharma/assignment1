@@ -14,13 +14,11 @@ hr{
   padding-top: 24px;
 }
 
+
+/* Main fields diplay */
 label {
-   /* display: block;  */
-  /* width: 10em; */
-  
   margin: .5em 0;
   color: #bfb6b6;
-  /* font-weight: bold; */
 }
 
 input {
@@ -28,7 +26,6 @@ input {
   font-size: 1em;
   padding-left: .4em;
   height: 50px;
-  /* width: 70%; */
  
 }
 

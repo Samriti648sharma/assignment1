@@ -3,6 +3,7 @@
     <br><br>
   <form [formGroup]="userProfileForm" (ngSubmit)='onSubmit(userProfileForm.value)'> 
     <div class='flex-container'>
+      <!-- profile fields -->
     <div class='column1'>
     <label>
       FULL NAME<br> 
@@ -28,8 +29,8 @@
   <div class='column2'>
     <label>
       EMAIL ADDRESS <br>
-      <input type="text" for="email" formControlName="email"  [(ngModel)]="data.email"><br>
-      <span class="error" *ngIf="userProfileForm.get('email').invalid && userProfileForm.get('email').touched">Field Required</span>
+      <input type="email" for="email" formControlName="email"  [(ngModel)]="data.email"><br>
+      <span class="error" *ngIf="userProfileForm.get('email').invalid && userProfileForm.get('email').touched">Field Invalid</span>
     </label>
     <br><br>
     <label>
@@ -38,14 +39,8 @@
       <span class="error" *ngIf="userProfileForm.get('address').invalid && userProfileForm.get('address').touched">Field Required</span>
     </label>
     <br><br>
- 
-  
   <br>
-
- 
     <button class ='submit' type="submit" [disabled]="!userProfileForm.valid">Submit</button>
-
-  
 </div>
 </div>
   </form>

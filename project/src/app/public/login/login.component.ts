@@ -17,10 +17,9 @@ export class LoginComponent implements OnInit {
 constructor(private forn_b: FormBuilder, private service: LoginService,private Route:Router) { }
 
 loginForm = this.forn_b.group({
-  "email": ['', Validators.required],
+  "email": ['', Validators.email],
   "password": ['', Validators.required],
    })
-
 
 
   ngOnInit() {
@@ -31,18 +30,17 @@ loginForm = this.forn_b.group({
       );
   }
 
- 
   onSubmit = function() {
     let i,res="no_user";
-
     
 //check if user exist or not
     for(i=0;i<this.users.length;i++){
         if( this.loginForm.value.email==this.users[i].email && this.loginForm.value.password==this.users[i].password ){
           localStorage.setItem("user","true");
           res="user_exist";
+          localStorage.setItem("id",this.users[i].id);
           this.Route.navigate(['/nav/profile']);
-           localStorage.setItem("id",this.users[i].id);
+     
         }
     }
     if(res!="user_exist"){

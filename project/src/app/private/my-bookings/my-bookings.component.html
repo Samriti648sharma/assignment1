@@ -7,21 +7,22 @@
 </div>
 
     <div *ngIf="upcomingFlag">
+        <!-- upcoming bookings view  -->
         <div class="booking" *ngFor = "let booking of upcoming">
             <span id="display">{{booking.date}}</span>
             <b class="status" [ngStyle]="{'color':booking.status=== 'pending' ? '#de6262': '#6565f5' }">{{booking.status | uppercase }}</b>
             <b><h4 id="display">{{booking.name}}</h4></b>
         <span id="display">{{booking.address}}</span>
-        <!-- <span class="badge badge-secondary">New</span> -->
-        
         </div> 
     </div> 
     <div *ngIf="pastFlag">
+         <!-- past bookings view  -->
             <div class="booking" *ngFor = "let booking of past">
                 <span id="display">{{booking.date}}</span>
                 <b class="status" [ngStyle]="{'color':booking.status=== 'Completed' ? '#66a266': 'blue' }">{{booking.status | uppercase }}</b>
                 <h3 id="display">{{booking.name}}</h3>
             <span id="display">{{booking.address}}</span>
+            
             </div>
         </div>   
 

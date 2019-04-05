@@ -4,11 +4,11 @@ import { FaqComponent } from './faq/faq.component';
 import { MyBookingsComponent } from './my-bookings/my-bookings.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthService } from '../Gaurd/auth.service';
+import { PrivateGuard } from '../Gaurd/private.guard';
 
 
 const appRoutes : Routes=[
-  {path: 'nav', component: NavbarComponent ,canActivate:[AuthService],children:[
+  {path: 'nav', component: NavbarComponent ,canActivate:[PrivateGuard],children:[
     {path: 'profile', component: ProfileComponent, },
   {path: 'booking', component: MyBookingsComponent,},
   {path: 'faq', component: FaqComponent ,}]}

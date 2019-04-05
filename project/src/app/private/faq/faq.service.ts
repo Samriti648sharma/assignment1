@@ -8,6 +8,7 @@ export class FaqService {
 
   constructor(private http: HttpClient) { }
 
+  // call to faq object in db
   fetch_faq() {
     return this.http.get('http://localhost:3000/faq')
     

@@ -5,18 +5,23 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto" style="padding-left: 70%;" >
      
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="padding-right: 20%" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+        <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
          <b>{{name}}</b>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <!-- collapsed navgation bar -->
+        <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+          <!-- dropdown items -->
           <a class="dropdown-item" routerLink="/nav/profile">{{name}}</a>
-          <a class="dropdown-item" routerLink="/nav/booking">My Bookings</a>
+          <div class="dropdown-divider"></div>
+          <span *ngIf="countbookings.count!=0" class="badge badge-secondary">{{countbookings.count}}</span><a class="dropdown-item" routerLink="/nav/booking"> My Bookings</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/nav/faq">FAQs</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" (click)="logout()">Logout</a>
+          
         </div>
       </li>
      
@@ -24,5 +29,7 @@
   
   </div>
 </nav>
+<br>
+<h2><p class="dynamicHeader" style="color: yellowgreen;text-align: center;">{{header}}</p></h2>
 
 <router-outlet></router-outlet>

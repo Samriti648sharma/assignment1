@@ -8,7 +8,8 @@ export class RegisterService {
 
   constructor(private http: HttpClient) { }
 
-
+// call to profile object
+// post data to profile 
   register(data: any[]) {
     return this.http.post('http://localhost:3000/profile', data)
     

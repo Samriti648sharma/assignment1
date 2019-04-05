@@ -1,3 +1,5 @@
+
+
 .div1 {
     width: 70%;
     height: 90%;  
@@ -33,12 +35,7 @@
   li.active a {
     text-decoration: underline;
   }
-  
-   /* .active {
-  color: #4CAF50;
-  text-decoration: underline;
-  }  */
-
+ 
 
   .booking{
     background-color: #e7eef5;
@@ -48,6 +45,8 @@
     padding-bottom: 20px;
     font-size: 15px;
   }
+
+  /* main box container outside bookings detail */
   .container{
 
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
@@ -56,8 +55,7 @@
     padding-bottom: 3%;
     padding-right: 3%;
     padding-left: 3%;
-    /* border: 1px solid;
-    margin-top: 40px; */
+   
   }
 
 .status{

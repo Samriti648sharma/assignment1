@@ -1,6 +1,8 @@
+<!-- Main register component form -->
 <div class="container">
     <h2 class="heading"> REGISTER</h2>
     <hr/>
+    <!-- call profile form -->
     <form [formGroup]="profileForm"   (ngSubmit)='onSubmit(profileForm.value)'> 
       <div class='flex-container'>
       <div class='column1'>
@@ -12,7 +14,7 @@
       <br><br>
       <label>
          <b> EMAIL ADDRESS </b><br>
-          <input type="text" for="email" formControlName="email" ><br>
+          <input type="email" for="email" formControlName="email" ><br>
           <span class="error" *ngIf="profileForm.get('email').invalid && profileForm.get('email').touched">Field Required</span>
         </label>
         <br><br>
@@ -25,7 +27,7 @@
      
       <label>
           <b>PASSWORD </b><br>
-          <input type="password" for="password" formControlName="password" ><br>
+          <input type="password" name="password" formControlName="password" /><br>
           <span class="error" *ngIf="profileForm.get('password').invalid && profileForm.get('password').touched">Field Required</span>
         </label>
 
@@ -54,8 +56,8 @@
 
       <label>
         <b>CONFIRM PASSWORD </b><br>
-        <input type="password" for="cpass" formControlName="c_password" ><br>
-        <span class="error" *ngIf="profileForm.get('c_password').invalid && profileForm.get('c_password').touched">Field Required</span>
+        <input type="password" formControlName="c_password"  name="c_password" appConfirmPasswordValidator='password' required/><br>
+        <span class="error" *ngIf="profileForm.get('c_password').hasError('notEqual')">password and confirm password do not match</span>
         
       </label>
     </div>

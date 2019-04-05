@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { UpdateService } from './profile/update.service';
 import { BookingsService } from './my-bookings/bookings.service';
 import { FaqService } from './faq/faq.service';
+import { PrivateGuard } from '../Gaurd/private.guard';
+
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { FaqService } from './faq/faq.service';
   ],
   providers:[ UpdateService,
     BookingsService,
-    FaqService ]
+    FaqService ,
+    PrivateGuard]
 })
 export class PrivateModule { }

@@ -12,7 +12,7 @@ import { UpdateService } from './update.service';
 export class ProfileComponent implements OnInit {
   users:any;
   name:string;
-  
+  //object for various fields stored in db
   data:any={
     id :'',
   fullName:'',
@@ -31,19 +31,18 @@ export class ProfileComponent implements OnInit {
     "fullName": ['', Validators.required],
     "phone":  ['', Validators.required],
     "medical_history": [],
-    "email": ['', Validators.required],
+    "email": ['', Validators.email],
     "address": ['', Validators.required]
     })
 
  
 
   ngOnInit() {
+
+    //show names in fields initially
    this.data.id=localStorage.getItem('id');
-  //  console.log(this.data.id);
     this.service.login().subscribe(
       (response) =>{ this.users=response
-    //  this.name=this.users[this.id-1].firstName;
-    //  console.log(this.name);
     this.data.fullName=this.users[this.data.id-1].firstName + " " + this.users[this.data.id-1].lastName;
     this.data.phone=this.users[this.data.id-1].phone;
     this.data.medical_history=this.users[this.data.id-1].medical_history;
@@ -58,11 +57,10 @@ export class ProfileComponent implements OnInit {
     }
 
     onSubmit = function(data) {
-     
+      //to display user name at top of navigation
       this.name=this.data.fullName.split(" ");
       this.data.firstName=this.name[0];
       this.data.lastName=this.name[1];
-
       this.update_service.update(this.data.id,this.data).subscribe(
         (response) =>{ console.log(response);
           window.location.reload();

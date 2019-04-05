@@ -10,49 +10,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent{
-// data:Data= {
-//   FirstName:"",
-//   LastName:"",
-//   Email:"",
-//   Phone:null,
-//   Address:"",
-//   Medical_History:"",
-//   Password:"",
-//   Confirm_Password:""
-// };
 
-
+//various input fields 
+profileForm = this.fb.group({
+  "firstName": ['', Validators.required],
+  "lastName":  ['', Validators.required],
+  "email": ['',Validators.compose([ Validators.required,Validators.email])],
+  "phone": ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(10)])],
+  "address": ['', Validators.required],
+  "medical_history": [],
+  "password": ['', Validators.required],
+  "c_password": ['', Validators.required],
+  }
+  )
   
 constructor(private fb: FormBuilder, private service: RegisterService,private Route:Router) { }
 
-  profileForm = this.fb.group({
-    "firstName": ['', Validators.required],
-    "lastName":  ['', Validators.required],
-    "email": ['', Validators.required],
-    "phone": ['',Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(10)])],
-    "address": ['', Validators.required],
-    "medical_history": [],
-    "password": ['', Validators.required],
-    "c_password": ['', Validators.required],
-
-    })
-
- 
-  
-
 
   ngOnInit() {
-  }
+  }  
 
-
-  
-
+  //call profile object of db on submit
   onSubmit = function(data) {
     this.service.register(data).subscribe(
-      (response) =>{ console.log(response);
-        this.Route.navigate(['/nav/profile']);
-      localStorage.setItem("user","true")}
-        ,
+      (response) =>{ 
+      this.Route.navigate(['/login']);
+    },
       (error) => console.log(error)
     );
     

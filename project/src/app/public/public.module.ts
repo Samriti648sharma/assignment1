@@ -7,10 +7,12 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RegisterService } from './register/register.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PrivateModule } from "../private/private.module";
+import { PublicGuard } from '../Gaurd/public.guard';
+import { ConfirmPasswordDirective } from './register/check.directive';
 
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent],
+  declarations: [RegisterComponent, LoginComponent,ConfirmPasswordDirective],
   imports: [
     CommonModule,
     PublicRoutingModule,
@@ -18,6 +20,7 @@ import { PrivateModule } from "../private/private.module";
     HttpClientModule,
     PrivateModule
   ],
-  providers: [ RegisterService ]
+  providers: [ RegisterService,
+    PublicGuard ]
 })
 export class PublicModule { }

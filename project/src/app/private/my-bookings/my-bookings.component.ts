@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingsService } from './bookings.service';
 import { Router } from '@angular/router';
+import { CountBookings } from 'src/app/shared/bookingCount.service';
 
 @Component({
   selector: 'app-my-bookings',
@@ -13,7 +14,9 @@ past:any;
 upcomingFlag: boolean = true;
 pastFlag: boolean;
 
-  constructor(private service: BookingsService, private service2: BookingsService,private Route:Router) { }
+total:number;
+
+  constructor(private service: BookingsService, private service2: BookingsService,private Route:Router, private count: CountBookings) { }
 
   show(){
     this.upcomingFlag=true;
@@ -25,17 +28,19 @@ pastFlag: boolean;
   }
 
   ngOnInit() {
+    // call to upcoming_bookings onject in db.json
     this.service.upcoming_bookings().subscribe(
       (response) => {this.upcoming=response
-      console.log(this.upcoming);
+     
     },
       (error) => console.log(error)
     );
 
-
+// call to past_bookings onject in db.json
     this.service2.past_bookings().subscribe(
       (response) =>{ this.past=response
-        console.log(this.past);
+        this.total=this.upcoming.length + this.past.length;
+        this.count.count = this.total;
       },
       (error) => console.log(error)
     );

@@ -8,6 +8,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
+// call profile object
   login() {
     return this.http.get('http://localhost:3000/profile')
     

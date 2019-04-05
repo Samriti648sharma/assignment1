@@ -1,3 +1,4 @@
+/* Main heading at page  */
 .heading{
     color: #33ef67;
   }
@@ -5,10 +6,9 @@
     font-family: 'Roboto';
     border:1px solid #f1f1f1;
     width:100%;
-  }
+  } 
 
-  
-
+  /* The login button */
   button {
     font-family: 'Roboto';
     background-color: #eee;
@@ -36,6 +36,7 @@
     color: red;
   }
 
+  /* Main box outside component */
   #box{
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     justify-self: center;
@@ -44,9 +45,6 @@
     padding-top: 5%;
     padding-bottom: 5%;
     padding-right: 10%;
-    padding-left: 10%;
+    padding-left: 7%;
     width:30%;
-    /* position: relative;
-    text-align: center;
-    vertical-align: middle; */
 }

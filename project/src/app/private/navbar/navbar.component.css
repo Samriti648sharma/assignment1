@@ -1,0 +1,14 @@
+#navbarDropdown{
+    text-align: right;
+}
+
+
+/*display rounded image */
+img {
+    border-radius: 50%;
+    height:10%;
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
